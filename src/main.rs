@@ -28,7 +28,6 @@ fn main() {
     //  * Write the disemvoweled text using write_file
 
     // Replace String::from("dummy text") with what you get from read_file
-    println!("{}", args[1]);
     let path = Path::new(&args[1]);
     let s = String::from(read_file(path));
 
@@ -58,7 +57,6 @@ fn disemvowel(s: &str) -> String {
         else{
             x = x+1;
         }
-        
     }
     let final_string: String = chars.into_iter().collect();
     String::from(final_string)
